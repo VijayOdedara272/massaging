@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "840301745795",
+    "project_id": "massaging-4f5b5",
+    "storage_bucket": "massaging-4f5b5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:840301745795:android:9b77f26ebea95905da2db6",
+        "android_client_info": {
+          "package_name": "com.example.flutter_chat_ui"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "840301745795-7n24f4r9fqlkkm5igva92b292up8npka.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-X7gYJWBbMonYhH5MzTPjvQgL771bLRk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "840301745795-7n24f4r9fqlkkm5igva92b292up8npka.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
