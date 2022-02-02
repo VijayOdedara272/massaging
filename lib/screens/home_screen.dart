@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_chat_ui/widgets/category_selector.dart';
 import 'package:flutter_chat_ui/widgets/recent_chats.dart';
+import 'package:flutter_chat_ui/models/databasehelper.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -10,6 +12,10 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
+
+    TextEditingController texteditingcontrol = TextEditingController();
+    var db = LocalDatabase.instance;
+
     return Scaffold(
       backgroundColor: Theme.of(context).primaryColor,
       appBar: AppBar(
@@ -20,12 +26,12 @@ class _HomeScreenState extends State<HomeScreen> {
           onPressed: () {},
         ),
         title: Text(
-          'Chats',
-          style: TextStyle(
-            fontSize: 28.0,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
+              'Chats',
+              style: TextStyle(
+                fontSize: 28.0,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
         elevation: 0.0,
         actions: <Widget>[
           IconButton(
@@ -51,6 +57,7 @@ class _HomeScreenState extends State<HomeScreen> {
               child: Column(
                 children: <Widget>[
                   RecentChats(),
+                //  FloatingActionButton(onPressed: db.addUser(texteditingcontrol.text)),
                 ],
               ),
             ),

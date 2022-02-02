@@ -1,6 +1,8 @@
 import 'package:flutter_chat_ui/models/user_model.dart';
 import 'package:path/path.dart';
 import 'package:sqflite/sqflite.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 import 'json.dart';
 import 'message_model.dart';
@@ -136,5 +138,18 @@ CREATE TABLE $tableNotes (
     final db = await instance.database;
 
     db.close();
+  }
+
+
+  //Firebase DAtabase
+
+  CollectionReference users = FirebaseFirestore.instance.collection('users');
+
+  addUser(String name) {
+    // Call the user's CollectionReference to add a new user
+    return users
+        .add({name})
+        .then((value) => print("User Added"))
+        .catchError((error) => print("Failed to add user: $error"));
   }
 }
